@@ -130,7 +130,6 @@ nav a:hover{
 
 .hero{
     position: relative;
-    min-height: 60vh;
     display: flex;
     align-items: center;
     background: var(--accent);
@@ -1428,6 +1427,7 @@ flatpickr(timeInput, {
 .flatpickr-next-month:hover svg{
     fill:#FFB400;
 }
+
 
 
 
