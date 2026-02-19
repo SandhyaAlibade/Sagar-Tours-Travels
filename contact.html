@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Sagar Tours and Travels Pune</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+emailjs.init("x0ddyNtb_QaisaXB5");
+})();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<body>
+
+
+ <header class="header">
+  <div class="nav-container">
+
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+
+   <nav>
+		<a href="index.html">Home</a>
+		<a href="services.html">Services</a>
+		<a href="about.html">About</a>
+		<a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+
+<section class="about-hero">
+    <h1>Contact & Booking</h1>
+    <p>We believe every journey should be comfortable, safe, and worry-free. Just message or call — and your travel is taken care of.</p>
+</section>
+
+
+
+<section class="fleet">
+
+
+<h2>Ride in Comfort, Reach with Confidence!</h2>
+
+<div class="fleet-container">
+
+    <!-- CALL -->
+    <div class="car">
+        <h3>📞 Call Now</h3>
+        <p>Tap to call directly</p>
+        <br>
+        <a class="book-btn" href="tel:9850778025">Call 9850778025</a>
+    </div>
+
+    <div class="car">
+        <h3>💬 WhatsApp Booking</h3>
+        <p>Quick booking on WhatsApp</p>
+        <br>
+        <a class="book-btn"
+           href="https://wa.me/919850778025?text=Hello%20I%20want%20to%20book%20a%20cab">
+           Message on WhatsApp
+        </a>
+    </div>
+
+
+    <div class="car">
+        <h3>📱 Alternate Number</h3>
+        <p>Available 24/7</p>
+        <br>
+        <a class="book-btn" href="tel:9075737181">Call 9075737181</a>
+    </div>
+
+</div>
+
+
+<section class="booking-section">
+
+<div class="booking-card">
+
+<h2>Book Your Ride</h2>
+<p class="booking-sub">Quick booking — we will call you within minutes.</p>
+
+<form id="enquiryForm" class="booking-grid">
+
+
+<div class="form-group">
+<label>Pickup Location</label>
+<input type="text" name="pickup" placeholder="Enter pickup location" required>
+</div>
+
+<div class="form-group">
+<label>Drop Location</label>
+<input type="text" name="drop" placeholder="Enter drop location" required>
+</div>
+
+<div class="form-group">
+<label>Travel Date</label>
+<input type="text" id="travelDate" name="date" placeholder="Select travel date" required>
+</div>
+
+<div class="form-group">
+<label>Pickup Time</label>
+<input type="text" id="pickupTime" name="time" placeholder="Select pickup time" required>
+</div>
+
+
+<div class="form-group">
+<label>Vehicle Type</label>
+<select name="vehicle" required>
+<option value="">Select vehicle</option>
+<option>Sedan</option>
+<option>Ertiga</option>
+<option>Innova Crysta</option>
+<option>Innova Hycross</option>
+<option>XUV 3XO</option>
+</select>
+</div>
+
+
+<div class="form-group">
+<label>Your Name</label>
+<input type="text" name="name" placeholder="Full name" required>
+</div>
+
+<div class="form-group">
+<label>Mobile Number</label>
+<input type="tel" name="phone" placeholder="10 digit mobile number" required>
+</div>
+
+<div class="form-group full">
+<label>Additional Message</label>
+<textarea name="message" placeholder="Any special requirement (optional)"></textarea>
+</div>
+
+<div class="form-group full">
+<button type="submit" id="submitBtn" class="book-submit">
+Send Booking Request
+</button>
+</div>
+
+</form>
+
+<div id="formStatus"></div>
+
+</div>
+</section>
+
+
+
+</section>
+
+
+<section class="service-area">
+    <h1>Service Area</h1>
+    <p>
+        We provide cab services in Pune, Pimpri-Chinchwad, Hinjewadi,
+        Wakad, Baner, Nigdi, Aundh and nearby areas.<br>
+        Airport pickup & drop available 24 hours.
+    </p>
+</section>
+
+
+
+<footer class="footer">
+	<div class="footer-col">
+        <h3>Quick Links</h3>
+        <a href="index.html">➡️Home</a><br>
+		<a href="services.html">➡️Services</a><br>
+		<a href="about.html">➡️About</a><br>
+		<a href="contact.html">➡️Contact</a>
+    </div>
+    <div class="footer-col">
+        <h3>📍Location</h3>
+        <p>Vijay Nagar, Kalewadi, <br>Pimpri, Pune 411017</p>    </div>
+    <div class="footer-col">
+        <h3>🕛Hours</h3>
+        <p>24 Hours Service<br>All Days Available</p>
+    </div>
+
+    <div class="footer-col">
+        <h3>📞Contact</h3>
+        <p>9850778025<br>9075737181</p>
+    </div>
+
+
+</footer>
+
+
+
+<a href="https://wa.me/919075737181?text=Hello%20I%20want%20to%20book%20an%20outstation%20cab"
+   class="whatsapp-float" target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+<script src="script.js"></script>
+</body>
+</html>
