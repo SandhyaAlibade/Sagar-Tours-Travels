@@ -38,30 +38,70 @@ form.addEventListener("submit", function(e){
 });
 
 
+// ===== RESPONSIVE CAROUSEL =====
 document.addEventListener("DOMContentLoaded", function(){
 
-    const track = document.querySelector('.carousel-track');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
+const track = document.querySelector('.carousel-track');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
 
-    // stop if not on about page
-    if(!track || !nextBtn || !prevBtn) return;
+if(!track || !nextBtn || !prevBtn) return;
 
-    let position = 0;
-    const slideWidth = track.children[0].offsetWidth + 30;
-    const maxMove = (track.children.length - 3) * slideWidth;
+let index = 0;
+let slides;
+let slideWidth;
 
-    nextBtn.addEventListener('click', () => {
-        position -= slideWidth;
-        if(Math.abs(position) > maxMove) position = 0;
-        track.style.transform = `translateX(${position}px)`;
-    });
+function setupCarousel(){
+    slides = track.querySelectorAll('.car-slide');
+    slideWidth = slides[0].getBoundingClientRect().width + 20;
+    moveCarousel();
+}
 
-    prevBtn.addEventListener('click', () => {
-        position += slideWidth;
-        if(position > 0) position = -maxMove;
-        track.style.transform = `translateX(${position}px)`;
-    });
+function moveCarousel(){
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+}
+
+nextBtn.addEventListener('click', ()=>{
+    if(index < slides.length - 1){
+        index++;
+    }else{
+        index = 0; // infinite loop
+    }
+    moveCarousel();
+});
+
+prevBtn.addEventListener('click', ()=>{
+    if(index > 0){
+        index--;
+    }else{
+        index = slides.length - 1;
+    }
+    moveCarousel();
+});
+
+// mobile swipe
+let startX = 0;
+
+track.addEventListener('touchstart', e=>{
+    startX = e.touches[0].clientX;
+});
+
+track.addEventListener('touchend', e=>{
+    let endX = e.changedTouches[0].clientX;
+    let diff = startX - endX;
+
+    if(diff > 50){
+        nextBtn.click();
+    }
+    if(diff < -50){
+        prevBtn.click();
+    }
+});
+
+// recalc on resize
+window.addEventListener('resize', setupCarousel);
+
+setupCarousel();
 
 });
 
@@ -271,3 +311,4 @@ flatpickr(dateInput, {
 dateInput.addEventListener("focus", function(){
     dateInput._flatpickr.open();
 });
+
