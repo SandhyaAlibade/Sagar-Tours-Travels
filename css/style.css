@@ -495,6 +495,7 @@ nav a:hover{
 
 
 .why-us{
+	max-width:90%;
     padding-bottom:80px;
 }
 
@@ -1427,6 +1428,7 @@ flatpickr(timeInput, {
 .flatpickr-next-month:hover svg{
     fill:#FFB400;
 }
+
 
 
 
