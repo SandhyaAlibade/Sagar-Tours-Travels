@@ -696,7 +696,9 @@ nav a:hover{
 .footer{
     display:grid;
     justify-content:space-around;
-    padding:60px 20px;
+    padding:60px;
+	padding-left:60px;
+	padding-right:30px;
     color:white;
 	grid-template-columns:repeat(4,1fr);
     gap:25px;
@@ -752,6 +754,8 @@ nav a:hover{
   .home-hero h1{ font-size:48px; }
   .airport-info{padding:60px 10px;}
   .hero-inner{text-align:center;}
+  .footer{grid-template-columns:repeat(2,1fr);}
+
 }
 
 @media (max-width: 768px){
@@ -1456,6 +1460,7 @@ flatpickr(timeInput, {
 .flatpickr-next-month:hover svg{
     fill:#FFB400;
 }
+
 
 
 
