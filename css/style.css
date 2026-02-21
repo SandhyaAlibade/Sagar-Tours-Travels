@@ -750,7 +750,7 @@ nav a:hover{
   .hero-content h1{ font-size:56px; }
   .home-hero h1{ font-size:48px; }
   .airport-info{padding:60px 10px;}
-  .hero-inner{text-align:center;}
+  .hero-inner{text-align:center;padding:0px 10px;}
 }
 
 @media (max-width: 768px){
@@ -762,7 +762,7 @@ nav a:hover{
   .hero-content{ margin:0 20px; text-align:center; }
   .hero-content h1{ font-size:40px; }
   .hero-content p{ font-size:16px; }
-  .hero-inner{text-align:center;}
+  .hero-inner{text-align:center;padding:0px 10px;}
   .home-hero{ padding:90px 20px; }
   .home-hero h1{ font-size:38px; }
   .airport-info{padding:60px 10px;}
@@ -1455,6 +1455,7 @@ flatpickr(timeInput, {
 .flatpickr-next-month:hover svg{
     fill:#FFB400;
 }
+
 
 
 
