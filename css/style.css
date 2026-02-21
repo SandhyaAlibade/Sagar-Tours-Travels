@@ -142,6 +142,7 @@ nav a:hover{
 .hero-inner{
     max-width:1200px;
     margin:0 auto;
+	text-align:center;
 }
 
 .hero-content{
@@ -1455,6 +1456,7 @@ flatpickr(timeInput, {
 .flatpickr-next-month:hover svg{
     fill:#FFB400;
 }
+
 
 
 
